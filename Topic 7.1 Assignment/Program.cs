@@ -48,6 +48,7 @@ namespace Topic_7._1_Assignment
             {
                 Console.Write("Try again. Enter another number here: ");
                 while (!int.TryParse(Console.ReadLine(), out userGuess)) ;
+                Console.WriteLine();
                 if (userGuess == randNum)
                 {
                     Console.WriteLine("Congrats! You guessed the number");
