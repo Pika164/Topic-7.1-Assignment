@@ -43,9 +43,9 @@ namespace Topic_7._1_Assignment
             Console.Write("Try to guess a number from 1-100: ");
             userGuess = Convert.ToInt32(Console.ReadLine());
 
-            tries++;
             while (!done)
             {
+                tries++;
                 Console.Write("Try again. Enter another number here: ");
                 while (!int.TryParse(Console.ReadLine(), out userGuess)) ;
                 Console.WriteLine();
@@ -56,16 +56,19 @@ namespace Topic_7._1_Assignment
                 }
                 else if (userGuess > randNum)
                 {
+                    Console.WriteLine();
                     Console.Write("Too high, Enter another number. ");
                     while (!int.TryParse(Console.ReadLine(), out userGuess)) ;
                 }
                 else
-                {
+                { 
+                    Console.WriteLine();
                     Console.Write("Too low, Enter another number. ");
                     while (!int.TryParse(Console.ReadLine(), out userGuess)) ;
                 }
                 if (tries == 7 && userGuess != randNum)
                 {
+                    Console.WriteLine();
                     Console.WriteLine("Took too many tries, YOU LOSE!");
                     done = true;
                 }
